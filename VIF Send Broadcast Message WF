@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SiebelMessage MessageId="" IntObjectName="Repository Workflow Definition Export V.7.7.1" MessageType="Integration Object" IntObjectFormat="Siebel Hierarchical">
+  <ListOfRepositoryWorkflowProcess>
+    <RepositoryWorkflowProcess>
+      <BusinessObject>Broadcast Message</BusinessObject>
+      <Inactive>N</Inactive>
+      <Name>VIF Send Broadcast Message WF: 0</Name>
+      <PersistentFrequency>N</PersistentFrequency>
+      <ProcessName>VIF Send Broadcast Message WF</ProcessName>
+      <ProjectName>Symbolic Strings</ProjectName>
+      <ReplicationLevel>None</ReplicationLevel>
+      <Runnable>N</Runnable>
+      <Status>COMPLETED</Status>
+      <Version>0</Version>
+      <WorkflowMode>SRVFLOW</WorkflowMode>
+      <StateManagementType>STATEFUL</StateManagementType>
+      <PassByRefHierarchyArgument>N</PassByRefHierarchyArgument>
+      <WebServiceEnabled>N</WebServiceEnabled>
+      <ListOfRepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>Time for sending message. Default current</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>DATE</DataType>
+          <InOut>IN</InOut>
+          <Name2>ActivationTime</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>The period of relevance of the message in hours. Optionaly</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>NUMBER</DataType>
+          <DefaultNumber>-1</DefaultNumber>
+          <InOut>IN</InOut>
+          <Name2>ActualWithinHours</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>BC of applet for DD</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>IN</InOut>
+          <Name2>DD_BC</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>BO of view for DD</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>IN</InOut>
+          <Name2>DD_BO</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>Id of record for drilldown</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>IN</InOut>
+          <Name2>DD_Id</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>Actual if properties DD present.LOV BRDCST_MSG_TYPE (Normal / High / Urgent / Urgent with Alert)</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>IN</InOut>
+          <Name2>DD_Severity</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>Drilldown to view</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>IN</InOut>
+          <Name2>DD_View</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>OUT</InOut>
+          <Name2>Error Code</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>OUT</InOut>
+          <Name2>Error Message</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>NONE</InOut>
+          <Name2>Object Id</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>OUT</InOut>
+          <Name2>Process Instance Id</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>OUT</InOut>
+          <Name2>Siebel Operation Object Id</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>Name of template. Required if missing DD fields</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>IN</InOut>
+          <Name2>SourceAbstarct</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>Required</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>IN</InOut>
+          <Name2>Subject</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <Comments>Required</Comments>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <InOut>IN</InOut>
+          <Name2>UserId</Name2>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <DefaultString>0</DefaultString>
+          <InOut>NONE</InOut>
+          <Name2>isDebug</Name2>
+        </RepositoryWfProcessProp>
+      </ListOfRepositoryWfProcessProp>
+      <ListOfRepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*372 120 444 1569*FillBgClr8*134348798*ArrowEnd1*1</Layout>
+          <Name3>Base for new message</Name3>
+          <Type>DECISION_POINT</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression>(DD_BC Is Null) AND (DD_BO Is Null) AND (DD_Id Is Null) AND (DD_View Is Null)</Expression>
+              <Inactive>N</Inactive>
+              <Name2>All DD empty</Name2>
+              <Type>DECISION</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*408 1804*NPts1*22*P07*408 1564*ToHS1*18*ArrowEnd1*4</Layout>
+              <ToStepName>Template present</ToStepName>
+              <ListOfRepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 413</Name2>
+                  <PropertyName>DD_BC</PropertyName>
+                  <Sequence>13</Sequence>
+                </RepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 416</Name2>
+                  <PropertyName>DD_BO</PropertyName>
+                  <Sequence>16</Sequence>
+                </RepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 418</Name2>
+                  <PropertyName>DD_Id</PropertyName>
+                  <Sequence>18</Sequence>
+                </RepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 420</Name2>
+                  <PropertyName>DD_View</PropertyName>
+                  <Sequence>20</Sequence>
+                </RepositoryWfBranchCriteria>
+              </ListOfRepositoryWfBranchCriteria>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression>(DD_BO Is Not Null) AND (DD_Id Is Not Null) AND (DD_BC Is Not Null) AND (DD_View Is Not Null)</Expression>
+              <Inactive>N</Inactive>
+              <Name2>All DD fields</Name2>
+              <Type>DECISION</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*12*P16*408 844*NPts1*22*P07*408 1204*ToHS1*38*ArrowEnd1*4</Layout>
+              <ToStepName>New Message</ToStepName>
+              <ListOfRepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NOT_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 42</Name2>
+                  <PropertyName>DD_BC</PropertyName>
+                  <Sequence>2</Sequence>
+                </RepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NOT_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 46</Name2>
+                  <PropertyName>DD_BO</PropertyName>
+                  <Sequence>6</Sequence>
+                </RepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NOT_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 49</Name2>
+                  <PropertyName>DD_Id</PropertyName>
+                  <Sequence>9</Sequence>
+                </RepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NOT_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 411</Name2>
+                  <PropertyName>DD_View</PropertyName>
+                  <Sequence>11</Sequence>
+                </RepositoryWfBranchCriteria>
+              </ListOfRepositoryWfBranchCriteria>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>def</Name2>
+              <Type>DEFAULT</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*468 1384*NPts1*22*P07*444 1384*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Stop 0</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*852 180 924 2169*FillBgClr8*167641088*ArrowEnd1*1</Layout>
+          <Name3>End 0</Name3>
+          <Type>END</Type>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <Operation>QUERY</Operation>
+          <BusinessComponent>Broadcast Message</BusinessComponent>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*468 180 540 2169*FillBgClr8*134218238*ArrowEnd1*1</Layout>
+          <Name3>Get Template</Name3>
+          <Type>SIEBEL_OPER</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>Connector 1</Name2>
+              <Type>CONNECTOR</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*564 1984*NPts1*22*P07*540 1984*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Single template</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>S</InputFlag>
+              <Name2>S:Siebel Operation 030</Name2>
+              <OutputArg>Broadcast Message</OutputArg>
+              <Sequence>3</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>&apos;Abstract = &quot;&apos; + [&amp;SourceAbstarct] + &apos;&quot;&apos;</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessServiceMethod>Echo</BusinessServiceMethod>
+          <BusinessServiceName>Workflow Utilities</BusinessServiceName>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*5*0*0*0*8*FontSize1*91*r13*180 60 252 969*FillBgClr8*134348288*FontName6*Tahoma8*ArrowEnd1*1</Layout>
+          <Name3>Input DD simulation</Name3>
+          <Type>TASK</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>Connector 4</Name2>
+              <Type>CONNECTOR</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*8*0*0*0*9*LineWidth1*22*P27*276 1384*FrHS1*22*P16*252 784*NPts1*32*P06*252 784*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Mandatory data</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Comments>Elmoked5</Comments>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input DD simulation3</Name2>
+              <PropertyName>UserId</PropertyName>
+              <Sequence>3</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>0-1</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input DD simulation4</Name2>
+              <PropertyName>DD_BC</PropertyName>
+              <Sequence>4</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Service Request</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input DD simulation5</Name2>
+              <PropertyName>Subject</PropertyName>
+              <Sequence>5</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Click for go to your new SR</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input DD simulation6</Name2>
+              <PropertyName>DD_BO</PropertyName>
+              <Sequence>6</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Service Request</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input DD simulation7</Name2>
+              <PropertyName>DD_View</PropertyName>
+              <Sequence>7</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Personal Service Request List View</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input DD simulation8</Name2>
+              <PropertyName>DD_Id</PropertyName>
+              <Sequence>8</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>1-XXX</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input DD simulation100</Name2>
+              <PropertyName>ActualWithinHours</PropertyName>
+              <Sequence>10</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>4.25</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input DD simulation130</Name2>
+              <PropertyName>DD_Severity</PropertyName>
+              <Sequence>13</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Urgent with Alert</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessServiceMethod>Echo</BusinessServiceMethod>
+          <BusinessServiceName>Workflow Utilities</BusinessServiceName>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*5*0*0*0*8*FontSize1*91*r15*180 180 252 2169*FillBgClr8*134348288*FontName6*Tahoma8*ArrowEnd1*1</Layout>
+          <Name3>Input Template simulation</Name3>
+          <Type>TASK</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>Connector 0</Name2>
+              <Type>CONNECTOR</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*276 1384*NPts1*22*P07*252 1984*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Mandatory data</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input Template simulation2</Name2>
+              <PropertyName>SourceAbstarct</PropertyName>
+              <Sequence>2</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>ProcessNewSR</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input Template simulation5</Name2>
+              <PropertyName>Subject</PropertyName>
+              <Sequence>5</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Process is work!!!</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input Template simulation9</Name2>
+              <PropertyName>ActivationTime</PropertyName>
+              <Sequence>9</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>TimeStamp() + 1/2/24/60</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input Template simulation11</Name2>
+              <PropertyName>ActualWithinHours</PropertyName>
+              <Sequence>11</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>4.5</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Comments>SADMIN</Comments>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <Name2>O:Input Template simulation16</Name2>
+              <PropertyName>UserId</PropertyName>
+              <Sequence>16</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>0-1</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*276 120 348 1569*FillBgClr8*134348798*ArrowEnd1*1</Layout>
+          <Name3>Mandatory data</Name3>
+          <Type>DECISION_POINT</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression>(UserId Is Not Null) AND (Subject Is Not Null)</Expression>
+              <Inactive>N</Inactive>
+              <Name2>Ok</Name2>
+              <Type>DECISION</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*372 1384*NPts1*22*P07*348 1384*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Base for new message</ToStepName>
+              <ListOfRepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NOT_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 63</Name2>
+                  <PropertyName>UserId</PropertyName>
+                  <Sequence>3</Sequence>
+                </RepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NOT_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 65</Name2>
+                  <PropertyName>Subject</PropertyName>
+                  <Sequence>5</Sequence>
+                </RepositoryWfBranchCriteria>
+              </ListOfRepositoryWfBranchCriteria>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>def</Name2>
+              <Type>DEFAULT</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*312 1804*NPts1*22*P07*312 1564*ToHS1*18*ArrowEnd1*4</Layout>
+              <ToStepName>Stop 3</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <Operation>INSERT</Operation>
+          <BusinessComponent>Broadcast Message</BusinessComponent>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r13*372 48 444 849*FillBgClr8*134218238*ArrowEnd1*1</Layout>
+          <Name3>New Message</Name3>
+          <Type>SIEBEL_OPER</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>Connector 5</Name2>
+              <Type>CONNECTOR</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*8*0*0*0*9*LineWidth1*22*P27*792 1804*FrHS1*22*P16*792 664*NPts1*32*P06*444 664*ToHS1*18*ArrowEnd1*4</Layout>
+              <ToStepName>Set User</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Type</Name2>
+              <Sequence>1</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>IfNull([&amp;DD_Severity], LookupValue (&quot;BRDCST_MSG_TYPE&quot;, &quot;Normal&quot;))</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Abstract</Name2>
+              <Sequence>2</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>&quot;[D]&quot; + [&amp;Subject]</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Body</Name2>
+              <Sequence>3</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>&quot;BO: &quot; + [&amp;DD_BO] + &quot;; BC: &quot; + [&amp;DD_BC] + &quot;; View: &quot; + [&amp;DD_View] + &quot;; Id: &quot; + [&amp;DD_Id]</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Activation Date/Time</Name2>
+              <PropertyName>ActivationTime</PropertyName>
+              <Sequence>4</Sequence>
+              <Type>PROPERTY</Type>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Expiration Date/Time</Name2>
+              <Sequence>5</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>IIf ([&amp;ActualWithinHours] &gt;= 0, IfNull([&amp;ActivationTime], TimeStamp())+ [&amp;ActualWithinHours] / 24,&quot;&quot;)</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Via Broadcasting</Name2>
+              <Sequence>6</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Y</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Via Interactive</Name2>
+              <Sequence>7</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Y</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Comments>OPENUI: Allow Dismiss flag is used for disbaling/enabling of whether user can dismiss the notification. If Y user can dismiss the message or else no</Comments>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Allow Dismiss</Name2>
+              <Sequence>8</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Y</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Primary User Id</Name2>
+              <PropertyName>UserId</PropertyName>
+              <Sequence>9</Sequence>
+              <Type>PROPERTY</Type>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <Operation>INSERT</Operation>
+          <BusinessComponent>Broadcast Message</BusinessComponent>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*660 180 732 2169*FillBgClr8*134218238*ArrowEnd1*1</Layout>
+          <Name3>New Message by template</Name3>
+          <Type>SIEBEL_OPER</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>Connector 2</Name2>
+              <Type>CONNECTOR</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*756 1984*NPts1*22*P07*732 1984*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Set User</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent>Broadcast Message</BusinessComponent>
+              <BusinessComponentField>Type</BusinessComponentField>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Type</Name2>
+              <Sequence>4</Sequence>
+              <Type>BUSCOMP</Type>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Abstract</Name2>
+              <PropertyName>Subject</PropertyName>
+              <Sequence>6</Sequence>
+              <Type>PROPERTY</Type>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent>Broadcast Message</BusinessComponent>
+              <BusinessComponentField>Body</BusinessComponentField>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Body</Name2>
+              <Sequence>7</Sequence>
+              <Type>BUSCOMP</Type>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Activation Date/Time</Name2>
+              <PropertyName>ActivationTime</PropertyName>
+              <Sequence>10</Sequence>
+              <Type>PROPERTY</Type>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Expiration Date/Time</Name2>
+              <Sequence>12</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>IIf ([&amp;ActualWithinHours] &gt;=1, IfNull([&amp;ActivationTime], TimeStamp)+ [&amp;ActualWithinHours] / 24,&quot;&quot;)</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent>Broadcast Message</BusinessComponent>
+              <BusinessComponentField>Via Interactive</BusinessComponentField>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Via Broadcasting</Name2>
+              <Sequence>13</Sequence>
+              <Type>BUSCOMP</Type>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent>Broadcast Message</BusinessComponent>
+              <BusinessComponentField>Via Interactive</BusinessComponentField>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Via Interactive</Name2>
+              <Sequence>14</Sequence>
+              <Type>BUSCOMP</Type>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent>Broadcast Message</BusinessComponent>
+              <BusinessComponentField>Allow Dismiss</BusinessComponentField>
+              <Comments>OPENUI: Allow Dismiss flag is used for disbaling/enabling of whether user can dismiss the notification. If Y user can dismiss the message or else no</Comments>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Allow Dismiss</Name2>
+              <Sequence>15</Sequence>
+              <Type>BUSCOMP</Type>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>Primary User Id</Name2>
+              <PropertyName>UserId</PropertyName>
+              <Sequence>18</Sequence>
+              <Type>PROPERTY</Type>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <Operation>INSERT</Operation>
+          <BusinessComponent>Broadcast Message - User</BusinessComponent>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*756 180 828 2169*FillBgClr8*134218238*ArrowEnd1*1</Layout>
+          <Name3>Set User</Name3>
+          <Type>SIEBEL_OPER</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>Connector 3</Name2>
+              <Type>CONNECTOR</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*852 1984*NPts1*22*P07*828 1984*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>End 0</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>User Id</Name2>
+              <PropertyName>UserId</PropertyName>
+              <Sequence>17</Sequence>
+              <Type>PROPERTY</Type>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*564 180 636 2169*FillBgClr8*134348798*ArrowEnd1*1</Layout>
+          <Name3>Single template</Name3>
+          <Type>DECISION_POINT</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>def</Name2>
+              <Type>DEFAULT</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*600 2404*NPts1*22*P07*600 2164*ToHS1*18*ArrowEnd1*4</Layout>
+              <ToStepName>Stop 2</ToStepName>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression>(Siebel Operation Object Id Is Not Null) AND ( All Must Match (Ignore Case)(&apos;[&amp;Siebel Operation Object Id] &lt;&gt;&apos;*&apos;&apos;))</Expression>
+              <Inactive>N</Inactive>
+              <Name2>y</Name2>
+              <Type>DECISION</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*660 1984*NPts1*22*P07*636 1984*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>New Message by template</ToStepName>
+              <ListOfRepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NOT_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 425</Name2>
+                  <PropertyName>Siebel Operation Object Id</PropertyName>
+                  <Sequence>25</Sequence>
+                </RepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>EQ_ALL_NC</Operation>
+                  <CompareTo>EXPRESSION</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 427</Name2>
+                  <Sequence>27</Sequence>
+                  <ListOfRepositoryWfBranchCriteriaValue>
+                    <RepositoryWfBranchCriteriaValue>
+                      <Inactive>N</Inactive>
+                      <LO_CHAR5>[&amp;Siebel Operation Object Id] &lt;&gt;&apos;*&apos;</LO_CHAR5>
+                      <Name2>Connector 4271</Name2>
+                      <Sequence>1</Sequence>
+                    </RepositoryWfBranchCriteriaValue>
+                  </ListOfRepositoryWfBranchCriteriaValue>
+                </RepositoryWfBranchCriteria>
+              </ListOfRepositoryWfBranchCriteria>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r14*72 120 144 1569*FillBgClr8*167641088*ArrowEnd1*1</Layout>
+          <Name3>Start</Name3>
+          <Type>START</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>l</Name2>
+              <Type>DEFAULT</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*180 1384*NPts1*22*P07*135 1384*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>is Debug</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <ErrorCode>WF_ERR_CUSTOM_1</ErrorCode>
+          <ErrorMessage>%1</ErrorMessage>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*4*0*0*0*1*r15*468 120 540 1569*FillBgClr8*100794369*LineColor3*2558*ArrowEnd1*1</Layout>
+          <Name3>Stop 0</Name3>
+          <Type>ABORT</Type>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>%1</Name2>
+              <Sequence>1</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>&quot;All properties DD_BO (&quot; + [&amp;DD_BO] + &quot;), DD_BC (&quot; + [&amp;DD_BC] + &quot;), DD_Id (&quot; + [&amp;DD_Id] + &quot;) and DD_View (&quot; + [&amp;DD_View] + &quot;) are required if present one from them&quot;</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <ErrorCode>WF_ERR_CUSTOM_1</ErrorCode>
+          <ErrorMessage>%1</ErrorMessage>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*4*0*0*0*1*r15*372 240 444 2769*FillBgClr8*100794369*LineColor3*2558*ArrowEnd1*1</Layout>
+          <Name3>Stop 1</Name3>
+          <Type>ABORT</Type>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>%1</Name2>
+              <Sequence>2</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>Properties SourceAbstarct or DD... required for creation Broadcast Message</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <ErrorCode>WF_ERR_CUSTOM_1</ErrorCode>
+          <ErrorMessage>%1</ErrorMessage>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*4*0*0*0*1*r15*564 240 636 2769*FillBgClr8*100794369*LineColor3*2558*ArrowEnd1*1</Layout>
+          <Name3>Stop 2</Name3>
+          <Type>ABORT</Type>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>%1</Name2>
+              <Sequence>3</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>IIf([&amp;Siebel Operation Object Id] is null, &quot;Not found Broadcast Message with Abstact = &apos;&quot; + [&amp;SourceAbstarct] + &quot;&apos;&quot;, &quot;Broadcast Message with Abstact = &apos;&quot; + [&amp;SourceAbstarct] + &quot;&apos; is not unique&quot;)</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <ErrorCode>WF_ERR_CUSTOM_1</ErrorCode>
+          <ErrorMessage>%1</ErrorMessage>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*4*0*0*0*1*r15*276 180 348 2169*FillBgClr8*100794369*LineColor3*2558*ArrowEnd1*1</Layout>
+          <Name3>Stop 3</Name3>
+          <Type>ABORT</Type>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <Name2>%1</Name2>
+              <Sequence>12</Sequence>
+              <Type>EXPRESSION</Type>
+              <ValueSearchSpecification>&quot;Subject (&quot; + [&amp;Subject] + &quot;) and UserId (&quot; + [&amp;UserId] + &quot;) are required&quot;</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*372 180 444 2169*FillBgClr8*134348798*ArrowEnd1*1</Layout>
+          <Name3>Template present</Name3>
+          <Type>DECISION_POINT</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression>(SourceAbstarct Is Not Null)</Expression>
+              <Inactive>N</Inactive>
+              <Name2>Y</Name2>
+              <Type>DECISION</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*468 1984*NPts1*22*P07*444 1984*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Get Template</ToStepName>
+              <ListOfRepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>IS_NOT_NULL</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 423</Name2>
+                  <PropertyName>SourceAbstarct</PropertyName>
+                  <Sequence>23</Sequence>
+                </RepositoryWfBranchCriteria>
+              </ListOfRepositoryWfBranchCriteria>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>def</Name2>
+              <Type>DEFAULT</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*408 2404*NPts1*22*P07*408 2164*ToHS1*18*ArrowEnd1*4</Layout>
+              <ToStepName>Stop 1</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*180 120 252 1569*FillBgClr8*134348798*ArrowEnd1*1</Layout>
+          <Name3>is Debug</Name3>
+          <Type>DECISION_POINT</Type>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression>(isDebug All Must Match (Ignore Case)(&apos;0&apos;))</Expression>
+              <Inactive>N</Inactive>
+              <Name2>0</Name2>
+              <Type>DECISION</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*276 1384*NPts1*22*P07*252 1384*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Mandatory data</ToStepName>
+              <ListOfRepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>EQ_ALL_NC</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>08</Name2>
+                  <PropertyName>isDebug</PropertyName>
+                  <Sequence>8</Sequence>
+                  <ListOfRepositoryWfBranchCriteriaValue>
+                    <RepositoryWfBranchCriteriaValue>
+                      <Inactive>N</Inactive>
+                      <LO_CHAR1>0</LO_CHAR1>
+                      <Name2>081</Name2>
+                      <Sequence>1</Sequence>
+                    </RepositoryWfBranchCriteriaValue>
+                  </ListOfRepositoryWfBranchCriteriaValue>
+                </RepositoryWfBranchCriteria>
+              </ListOfRepositoryWfBranchCriteria>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression>(isDebug All Must Match (Ignore Case)(&apos;1&apos;))</Expression>
+              <Inactive>N</Inactive>
+              <Name2>1</Name2>
+              <Type>DECISION</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*216 1804*NPts1*22*P07*216 1564*ToHS1*18*ArrowEnd1*4</Layout>
+              <ToStepName>Input Template simulation</ToStepName>
+              <ListOfRepositoryWfBranchCriteria>
+                <RepositoryWfBranchCriteria>
+                  <Operation>EQ_ALL_NC</Operation>
+                  <CompareTo>PROPERTY</CompareTo>
+                  <Inactive>N</Inactive>
+                  <Name2>Connector 611</Name2>
+                  <PropertyName>isDebug</PropertyName>
+                  <Sequence>11</Sequence>
+                  <ListOfRepositoryWfBranchCriteriaValue>
+                    <RepositoryWfBranchCriteriaValue>
+                      <Inactive>N</Inactive>
+                      <LO_CHAR1>1</LO_CHAR1>
+                      <Name2>Connector 6112</Name2>
+                      <Sequence>2</Sequence>
+                    </RepositoryWfBranchCriteriaValue>
+                  </ListOfRepositoryWfBranchCriteriaValue>
+                </RepositoryWfBranchCriteria>
+              </ListOfRepositoryWfBranchCriteria>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Inactive>N</Inactive>
+              <Name2>def</Name2>
+              <Type>DEFAULT</Type>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*12*P16*216 964*NPts1*22*P07*216 1204*ToHS1*38*ArrowEnd1*4</Layout>
+              <ToStepName>Input DD simulation</ToStepName>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+        </RepositoryWfStep>
+      </ListOfRepositoryWfStep>
+      <ListOfRepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>is Debug</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*276 1384*NPts1*22*P07*252 1384*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>0</Name2>
+          <ForBranchName>0</ForBranchName>
+          <ParentType>DECISION</ParentType>
+          <ToStepName>Mandatory data</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>is Debug</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*216 1804*NPts1*22*P07*216 1564*ToHS1*18*ArrowEnd1*4</Layout>
+          <Name2>1</Name2>
+          <ForBranchName>1</ForBranchName>
+          <ParentType>DECISION</ParentType>
+          <ToStepName>Input Template simulation</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Base for new message</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*408 1804*NPts1*22*P07*408 1564*ToHS1*18*ArrowEnd1*4</Layout>
+          <Name2>All DD empty</Name2>
+          <ForBranchName>All DD empty</ForBranchName>
+          <ParentType>DECISION</ParentType>
+          <ToStepName>Template present</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Base for new message</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*12*P16*408 844*NPts1*22*P07*408 1204*ToHS1*38*ArrowEnd1*4</Layout>
+          <Name2>All DD fields</Name2>
+          <ForBranchName>All DD fields</ForBranchName>
+          <ParentType>DECISION</ParentType>
+          <ToStepName>New Message</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Input Template simulation</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*276 1384*NPts1*22*P07*252 1984*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 0</Name2>
+          <ForBranchName>Connector 0</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Mandatory data</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Get Template</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*564 1984*NPts1*22*P07*540 1984*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 1</Name2>
+          <ForBranchName>Connector 1</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Single template</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>New Message by template</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*756 1984*NPts1*22*P07*732 1984*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 2</Name2>
+          <ForBranchName>Connector 2</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Set User</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Set User</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*852 1984*NPts1*22*P07*828 1984*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 3</Name2>
+          <ForBranchName>Connector 3</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>End 0</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Input DD simulation</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*8*0*0*0*9*LineWidth1*22*P27*276 1384*FrHS1*22*P16*252 784*NPts1*32*P06*252 784*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 4</Name2>
+          <ForBranchName>Connector 4</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Mandatory data</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>New Message</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*8*0*0*0*9*LineWidth1*22*P27*792 1804*FrHS1*22*P16*792 664*NPts1*32*P06*444 664*ToHS1*18*ArrowEnd1*4</Layout>
+          <Name2>Connector 5</Name2>
+          <ForBranchName>Connector 5</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Set User</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Mandatory data</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*372 1384*NPts1*22*P07*348 1384*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Ok</Name2>
+          <ForBranchName>Ok</ForBranchName>
+          <ParentType>DECISION</ParentType>
+          <ToStepName>Base for new message</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Template present</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*468 1984*NPts1*22*P07*444 1984*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Y</Name2>
+          <ForBranchName>Y</ForBranchName>
+          <ParentType>DECISION</ParentType>
+          <ToStepName>Get Template</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Mandatory data</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*312 1804*NPts1*22*P07*312 1564*ToHS1*18*ArrowEnd1*4</Layout>
+          <Name2>def</Name2>
+          <ForBranchName>def</ForBranchName>
+          <ParentType>DEFAULT</ParentType>
+          <ToStepName>Stop 3</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Single template</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*600 2404*NPts1*22*P07*600 2164*ToHS1*18*ArrowEnd1*4</Layout>
+          <Name2>def</Name2>
+          <ForBranchName>def</ForBranchName>
+          <ParentType>DEFAULT</ParentType>
+          <ToStepName>Stop 2</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>is Debug</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*12*P16*216 964*NPts1*22*P07*216 1204*ToHS1*38*ArrowEnd1*4</Layout>
+          <Name2>def</Name2>
+          <ForBranchName>def</ForBranchName>
+          <ParentType>DEFAULT</ParentType>
+          <ToStepName>Input DD simulation</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Template present</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*408 2404*NPts1*22*P07*408 2164*ToHS1*18*ArrowEnd1*4</Layout>
+          <Name2>def</Name2>
+          <ForBranchName>def</ForBranchName>
+          <ParentType>DEFAULT</ParentType>
+          <ToStepName>Stop 1</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Base for new message</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*468 1384*NPts1*22*P07*444 1384*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>def</Name2>
+          <ForBranchName>def</ForBranchName>
+          <ParentType>DEFAULT</ParentType>
+          <ToStepName>Stop 0</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Start</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*180 1384*NPts1*22*P07*135 1384*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>l</Name2>
+          <ForBranchName>l</ForBranchName>
+          <ParentType>DEFAULT</ParentType>
+          <ToStepName>is Debug</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <FromStepName>Single template</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*660 1984*NPts1*22*P07*636 1984*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>y</Name2>
+          <ForBranchName>y</ForBranchName>
+          <ParentType>DECISION</ParentType>
+          <ToStepName>New Message by template</ToStepName>
+        </RepositoryWfBranchConnector>
+      </ListOfRepositoryWfBranchConnector>
+    </RepositoryWorkflowProcess>
+  </ListOfRepositoryWorkflowProcess>
+</SiebelMessage>
